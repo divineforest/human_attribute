@@ -1,0 +1,28 @@
+= Human Attribute
+
+Defines method "human_value" for attribute translation.
+
+= Usage example
+
+en.yml:
+  en
+    activerecord
+      attribute_values:
+        user:
+          state:
+            new: Just registered
+            ok: Active
+
+Then:
+  user = User.first
+  user.state # => "new"
+  user.human_value(:state) # => "Just registered"
+
+= Installation
+
+In Gemfile:
+  gem 'human_attribute'
+
+== Copyright
+
+Copyright (c) 2011 divineforest, Evrone.com. See LICENSE.txt for further details.
