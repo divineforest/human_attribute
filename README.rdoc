@@ -25,4 +25,4 @@ In Gemfile:
 
 == Copyright
 
-Copyright (c) 2011 divineforest, Evrone.com. See LICENSE.txt for further details.
+Copyright (c) 2011 divineforest, {Evrone.com}[http://evrone.com]
