@@ -1,12 +1,16 @@
 = Human Attribute
 
-Defines method "human_value" for attribute translation.
+1) Defines method "human_name" for attribute name translation;
+2) Defines method "human_value" for attribute value translation.
 
 = Usage example
 
 en.yml:
   en
     activerecord
+      attributes:
+        user:
+          state: Status
       attribute_values:
         user:
           state:
@@ -16,6 +20,7 @@ en.yml:
 Then:
   user = User.first
   user.state # => "new"
+  user.human_name(:state) # => "Status"
   user.human_value(:state) # => "Just registered"
 
 = Installation
