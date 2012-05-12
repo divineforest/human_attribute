@@ -12,7 +12,7 @@ module ActiveRecord
     def human_value(attribute_name)
       value = send(attribute_name)
       if value.present?
-        I18n.t(value, :scope => "activerecord.attribute_values.#{self.class.name.downcase}.#{attribute_name}")
+        I18n.t(value, :scope => "activerecord.attribute_values.#{self.class.name.underscore}.#{attribute_name}")
       else
         value
       end
