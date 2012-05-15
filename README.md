@@ -1,10 +1,11 @@
-= Human Attribute
+# Human Attribute
 
-1) Defines method "human_name" for attribute name translation;
-2) Defines method "human_value" for attribute value translation.
+1. Defines method "human_name" for attribute name translation;
+1. Defines method "human_value" for attribute value translation.
 
-= Usage example
+## Usage example
 
+```yaml
 en.yml:
   en
     activerecord
@@ -16,18 +17,25 @@ en.yml:
           state:
             new: Just registered
             ok: Active
+```
 
 Then:
+
+```ruby
   user = User.first
   user.state # => "new"
   user.human_name(:state) # => "Status"
   user.human_value(:state) # => "Just registered"
+```
 
-= Installation
+## Installation
 
 In Gemfile:
+
+```ruby
   gem 'human_attribute'
+```
 
-== Copyright
+## Copyright
 
-Copyright (c) 2011 divineforest, {Evrone.com}[http://evrone.com]
+Copyright (c) 2012 divineforest, [Evrone.com](http://evrone.com)
