@@ -1,6 +1,6 @@
 # Human Attribute
 
-1. Defines method "human_name" for attribute name translation;
+1. Defines method "human_name" for attribute name translation (shortcut for class level method human_attribute_name);
 1. Defines method "human_value" for attribute value translation.
 
 ## Usage example
