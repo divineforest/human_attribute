@@ -38,4 +38,8 @@ In Gemfile:
 
 ## Copyright
 
-Copyright (c) 2012 divineforest, [Evrone.com](http://evrone.com)
+Copyright (c) 2013 divineforest, [Evrone.com](http://evrone.com)
+
+## License
+
+human_attribute is released under the [MIT License](http://www.opensource.org/licenses/MIT).
