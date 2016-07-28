@@ -1,6 +1,16 @@
 module ActiveRecord
   class Base
 
+    # en.activerecord.attribute_values.class_name.attribute_name
+    # Example I18n lookup: en.activerecord.attribute_values.user.state
+    def self.human_attribute_value(attribute_name, value)
+      if value.present?
+        I18n.t(value, :scope => "activerecord.attribute_values.#{self.name.underscore}.#{attribute_name}")
+      else
+        value
+      end
+    end
+
     # Looks in en.activerecord.attributes.class.attribute_name
     # Example I18n lookup: en.activerecord.attributes.user.state
     def human_name(attribute_name)
@@ -11,12 +21,7 @@ module ActiveRecord
     # Example I18n lookup: en.activerecord.attribute_values.user.state
     def human_value(attribute_name)
       value = send(attribute_name)
-      if value.present?
-        I18n.t(value, :scope => "activerecord.attribute_values.#{self.class.name.underscore}.#{attribute_name}")
-      else
-        value
-      end
+      self.class.human_attribute_value attribute_name, value
     end
-
   end
 end
